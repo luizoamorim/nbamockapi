@@ -65,9 +65,56 @@ const upcomingGames = [
   },
 ];
 
+const resultingGames = [
+  {
+    teamA: 118,
+    teamB: 100,
+  },
+  {
+    teamA: 115,
+    teamB: 102,
+  },
+  {
+    teamA: 99,
+    teamB: 89,
+  },
+  {
+    teamA: 89,
+    teamB: 74,
+  },
+  {
+    teamA: 125,
+    teamB: 55,
+  },
+  {
+    teamA: 131,
+    teamB: 101,
+  },
+  {
+    teamA: 77,
+    teamB: 78,
+  },
+  {
+    teamA: 100,
+    teamB: 119,
+  },
+  {
+    teamA: 98,
+    teamB: 114,
+  },
+  {
+    teamA: 97,
+    teamB: 103,
+  },
+];
+
 // Define a route that returns the list of upcoming games
 app.get("/upcoming-games", (req, res) => {
   res.json(upcomingGames);
+});
+
+app.get("/resulting-games", (req, res) => {
+  res.json(resultingGames);
 });
 
 // Start the server
