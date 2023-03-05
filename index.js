@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 
 // Define an array of 10 upcoming games
 const upcomingGames = [
@@ -1061,6 +1062,8 @@ const sportsABI = {
   linkReferences: {},
   deployedLinkReferences: {},
 };
+
+app.use(cors());
 
 // Define a route that returns the list of upcoming games
 app.get("/upcoming-games", (req, res) => {
